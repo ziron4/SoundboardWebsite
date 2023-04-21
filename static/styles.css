@@ -1,0 +1,38 @@
+/* Default Material Design color palette */
+:root {
+    --md-primary-color: #6200ee;
+    --md-secondary-color: #018786;
+    --md-error-color: #b00020;
+  }
+  
+  /* Button styles */
+  .md-button {
+    margin-bottom: 1vw;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: var(--md-primary-color);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer; /* Add this line */
+  }
+  
+  /* Button hover and focus styles */
+  .md-button:hover,
+  .md-button:focus {
+    background-color: #4d00b4;
+    outline: none;
+  }
+  
+  /* Button disabled styles */
+  .md-button:disabled {
+    background-color: #bdbdbd;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soundboard</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <center>
+        
+        {% for file in files %}
+            <div>
+                <button class="md-button" onclick="playSound('{{ file }}')">{{ file }}</button>
+            </div>
+        {% endfor %}
+
+    </center>
+    <script>
+        function playSound(filename) {
+            console.log("Playing filename: " + filename)
+            var audio = new Audio("{{ url_for('play_sound', filename='') }}" + "../static/sounds/" + filename);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
